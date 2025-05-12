@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Formulario de Contacto</title>
+    <link rel="stylesheet" href="./css/estilos.css" />
+  </head>
+  <body>
+    <nav class="mi-navbar">
+      <ul class="menu">
+        <li class="menu-item">
+          <a class="menu-link" href="./index.html">Inicio</a>
+        </li>
+      </ul>
+    </nav>
+    <form id="formulario" onsubmit="return validarFormulario()">
+      <h2>Contáctanos</h2>
+
+      <label for="nombre">Nombre completo:</label>
+      <input type="text" id="nombre" name="nombre" />
+      <div class="error" id="errorNombre"></div>
+
+      <label for="correo">Correo electrónico:</label>
+      <input type="email" id="correo" name="correo" />
+      <div class="error" id="errorCorreo"></div>
+
+      <label for="telefono">Teléfono:</label>
+      <input type="tel" id="telefono" name="telefono" />
+      <div class="error" id="errorTelefono"></div>
+
+      <label for="asunto">Asunto:</label>
+      <input type="text" id="asunto" name="asunto" />
+      <div class="error" id="errorAsunto"></div>
+
+      <label for="tipo">Tipo de mensaje:</label>
+      <select id="tipo" name="tipo">
+        <option value="">-- Selecciona una opción --</option>
+        <option value="sugerencia">Sugerencia</option>
+        <option value="queja">Queja</option>
+        <option value="otro">Otro</option>
+      </select>
+      <div class="error" id="errorTipo"></div>
+
+      <label for="mensaje">Mensaje:</label>
+      <textarea id="mensaje" name="mensaje" rows="5"></textarea>
+      <div class="error" id="errorMensaje"></div>
+
+      <div class="checkbox-group">
+        <input type="checkbox" id="terminos" name="terminos" />
+        <label for="terminos">Acepto los términos y condiciones</label>
+      </div>
+      <div class="error" id="errorTerminos"></div>
+
+      <button type="submit">Enviar Mensaje</button>
+    </form>
+
+    <script src="./js/script.js"></script>
+  </body>
+</html>
