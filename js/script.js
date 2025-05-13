@@ -34,10 +34,13 @@ function validarFormulario() {
     error = true;
   }
 
-  if (telefono === "") {
-    document.getElementById("errorTelefono").textContent = "Ingresa tu número de teléfono.";
-    error = true;
-  }
+if (telefono === "") {
+  document.getElementById("errorTelefono").textContent = "Ingresa tu número de teléfono.";
+  error = true;
+} else if (!telefono.match(/^\d+$/)) {
+  document.getElementById("errorTelefono").textContent = "El número de teléfono solo debe contener números.";
+  error = true;
+}
 
   if (asunto === "") {
     document.getElementById("errorAsunto").textContent = "Por favor, ingresa el asunto.";
@@ -83,5 +86,5 @@ function validarFormulario() {
     document.body.appendChild(divResultado);
   }
 
-  return false; // Evita que se recargue la página
+  return false; 
 }
